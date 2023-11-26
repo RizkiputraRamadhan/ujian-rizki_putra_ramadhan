@@ -21,7 +21,7 @@
                     </div>
                 @endif
             </div>
-           
+
             <table class="table">
                 <thead>
                     <tr>
@@ -48,7 +48,8 @@
                                     @csrf
                                     @method('DELETE')
 
-                                    <a href="/employee/{{ $data->id }}/{{ $data->nama }}" class="btn btn-ghost btn-xs"><i
+                                    <a href="/employee/{{ $data->id }}/{{str_replace(" ","-","$data->nama")}}/edit" class="btn btn-ghost btn-xs"> <i class="fa-solid fa-pen-to-square"></i></a>
+                                    <a href="/employee/{{ $data->id }}/{{str_replace(" ","-","$data->nama")}}" class="btn btn-ghost btn-xs"><i
                                         class="fa-solid fa-eye" style="color: #0a5ef0;"></i></a>
                                     <button type="submit" class="btn btn-ghost btn-xs"><i class="fa-solid fa-trash"
                                             style="color: #dc0909;"></i></button>
